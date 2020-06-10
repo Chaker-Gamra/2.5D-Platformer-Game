@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,12 +16,6 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public Transform model;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         //Take the horizontal input to move the player
@@ -41,8 +33,12 @@ public class PlayerController : MonoBehaviour
             ableToMakeADoubleJump = true;
             if (Input.GetButtonDown("Jump"))
             {
-                //Jump
-                direction.y = jumpForce;
+                Jump();
+            }
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                animator.SetTrigger("fireBallAttack");
             }
         }
         else
@@ -50,12 +46,12 @@ public class PlayerController : MonoBehaviour
             direction.y += gravity * Time.deltaTime;//Add Gravity
             if (ableToMakeADoubleJump && Input.GetButtonDown("Jump"))
             {
-                //Double Jump
-                animator.SetTrigger("doubleJump");
-                direction.y = jumpForce;
-                ableToMakeADoubleJump = false;
+                DoubleJump();
             }
         }
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Fireball Attack"))
+            return;
 
         //Flip the player
         if(hInput != 0)
@@ -66,5 +62,18 @@ public class PlayerController : MonoBehaviour
 
         //Move the player using the character controller
         controller.Move(direction * Time.deltaTime);
+    }
+
+    private void DoubleJump()
+    {
+        //Double Jump
+        animator.SetTrigger("doubleJump");
+        direction.y = jumpForce;
+        ableToMakeADoubleJump = false;
+    }
+    private void Jump()
+    {
+        //Jump
+        direction.y = jumpForce;
     }
 }
