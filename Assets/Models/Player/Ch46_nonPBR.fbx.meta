@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 52a160e869280764298b273060471c82
 ModelImporter:
-  serializedVersion: 19300
+  serializedVersion: 19301
   internalIDToNameTable:
   - first:
       74: -203655887218126122
@@ -11,22 +11,22 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch46_1001_Diffuse
-    second: {fileID: 2800000, guid: e799e58273c0bd8448b141595bcf9004, type: 3}
+    second: {fileID: 2800000, guid: 94d752b45a713d44d8960e038f11971f, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch46_1001_Glossiness
-    second: {fileID: 2800000, guid: 3e68371e42df5fa42ba7c25401258198, type: 3}
+    second: {fileID: 2800000, guid: ec7145c98e690e148b1990de1f80b6e8, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch46_1001_Normal
-    second: {fileID: 2800000, guid: 28e0c91f7b988a243be24e54bdbe11be, type: 3}
+    second: {fileID: 2800000, guid: ee5321f2cab4ce4498dbe7505b7d6df3, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch46_1001_Specular
-    second: {fileID: 2800000, guid: 554c97815e3422049946ad1e365b2a25, type: 3}
+    second: {fileID: 2800000, guid: 7e686d224426c964ea3829df2490d999, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -66,6 +66,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
