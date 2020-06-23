@@ -9,11 +9,15 @@ public class Enemy : MonoBehaviour
     public float attackRange = 2;
     public float speed = 3;
 
+    public int health;
+    public int maxHealth;
+
     public Animator animator;
 
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -57,5 +61,26 @@ public class Enemy : MonoBehaviour
             if (distance > attackRange)
                 currentState = "ChaseState";
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        currentState = "ChaseState";
+
+        if(health < 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        //play a die animation
+        animator.SetTrigger("isDead");
+
+        //disable the script and the collider
+        GetComponent<CapsuleCollider>().enabled = false;
+        this.enabled = false;
     }
 }

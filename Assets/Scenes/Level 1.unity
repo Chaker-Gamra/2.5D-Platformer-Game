@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 17130105}
   - component: {fileID: 17130109}
   m_Layer: 0
-  m_Name: Enmey
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,6 +307,8 @@ MonoBehaviour:
   chaseRange: 5
   attackRange: 2
   speed: 3
+  health: 0
+  maxHealth: 100
   animator: {fileID: 525724798}
 --- !u!4 &18718322 stripped
 Transform:
