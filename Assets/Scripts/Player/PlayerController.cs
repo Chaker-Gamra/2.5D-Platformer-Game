@@ -18,6 +18,15 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (PlayerManager.gameOver)
+        {
+            //play death animation
+            animator.SetTrigger("die");
+
+            //disable the script
+            this.enabled = false;
+        }
+
         //Take the horizontal input to move the player
         float hInput = Input.GetAxis("Horizontal");
         direction.x = hInput * speed;

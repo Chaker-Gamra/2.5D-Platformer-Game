@@ -23,6 +23,12 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PlayerManager.gameOver)
+        {
+            animator.enabled = false;
+            this.enabled = false;
+        }
+
         float distance = Vector3.Distance(transform.position, target.position);
 
         if(currentState == "IdleState")
