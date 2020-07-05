@@ -71,6 +71,11 @@ public class PlayerController : MonoBehaviour
 
         //Move the player using the character controller
         controller.Move(direction * Time.deltaTime);
+
+        //Reset Z Position
+        if (transform.position.z != 0)
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+
     }
 
     private void DoubleJump()

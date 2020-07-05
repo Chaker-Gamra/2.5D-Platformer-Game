@@ -12,11 +12,12 @@ public class PlayerManager : MonoBehaviour
 
     public static bool gameOver;
 
+    public GameObject gameOverPanel;
+
     void Start()
     {
-        numberOfCoins = 0;//Reset the number of coins on each level
+        numberOfCoins = 0;
         gameOver = false;
-
     }
 
     void Update()
@@ -31,6 +32,8 @@ public class PlayerManager : MonoBehaviour
         if(currentHealth < 0)
         {
             gameOver = true;
+            gameOverPanel.SetActive(true);
+            currentHealth = 100;
         }
     }
 }
