@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -182,7 +182,7 @@ Transform:
   - {fileID: 314850375}
   - {fileID: 673365405}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &12383005 stripped
 Transform:
@@ -290,7 +290,7 @@ Transform:
   m_Children:
   - {fileID: 525724797}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &17130109
 MonoBehaviour:
@@ -10943,7 +10943,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348829184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.57, y: 1.39, z: -0.1597383}
+  m_LocalPosition: {x: 33.6, y: 1.39, z: -0.1597383}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 191169071}
@@ -11559,7 +11559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442806149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.03, y: 1.39, z: -0.1597383}
+  m_LocalPosition: {x: 56.5, y: 1.39, z: -0.1597383}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 180028264}
