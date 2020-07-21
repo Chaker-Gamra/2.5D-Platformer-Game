@@ -87,6 +87,7 @@ public class Enemy : MonoBehaviour
 
         //disable the script and the collider
         GetComponent<CapsuleCollider>().enabled = false;
+        Destroy(gameObject, 3);
         this.enabled = false;
     }
 }

@@ -76,6 +76,12 @@ public class PlayerController : MonoBehaviour
         if (transform.position.z != 0)
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 
+        //win level
+        if (PlayerManager.winLevel)
+        {
+            animator.SetTrigger("win");
+            this.enabled = false;
+        }
     }
 
     private void DoubleJump()
